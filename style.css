@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+:root {
+  --red: hsl(14, 88%, 65%);
+  --dark-blue: hsl(238, 29%, 16%);
+  --violent: #af67e9;
+  --blue: #6565e7;
+  --text-dark-gray: hsl(237, 12%, 33%);
+  --text-light-gray: hsl(240, 6%, 50%);
+  --div-light-gray: hsl(240, 5%, 91%);
+}
+
+.container {
+  background: linear-gradient(187deg, rgba(175, 103, 233, 1) 30%, rgba(101, 101, 231, 1) 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: white;
+  border-radius: 30px;
+  height: 509px;
+  width: 920px;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-gap: 6rem;
+}
+
+/* image part */
+.image {
+  position: relative;
+}
+
+.image-background {
+  background: url(/images/illustration-woman-online-desktop.svg);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 120% center;
+}
+
+.box {
+  position: absolute;
+  top: 42%;
+  left: -25%;
+}
+
+/* end image part */
+
+.questions {
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.heading {
+  font-size: 3rem;
+  margin-top: 0px;
+}
+
+.questions>div {
+  width: 350px;
+  border-bottom: 1px solid #e8e8ea;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 15px;
+  color: (var(--text-light-gray));
+  margin: 15px 0px;
+}
+
+.active .title {
+  font-weight: 700;
+}
+
+.question img {
+  width: fit-content;
+  height: auto;
+}
+
+.active img {
+  transition: 0.3s;
+  transform: rotate(180deg);
+}
+
+.answer {
+  display: none;
+  font-size: 12px;
+}
+
+.active>.answer {
+  display: block;
+  padding-bottom: 1.3rem;
+  color: var(--darkGrayBlue);
+}
+
+
+@media (max-width: 950px) {
+  .card {
+    width: 350px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-gap: 0.5rem;
+    position: relative;
+    padding: 1rem;
+    height: 530px;
+  }
+  .image {
+    background: url("./images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center 590%;
+  }
+
+  .image-background {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-size: 72%;
+    background-position: center;
+    top: -129%;
+  }
+  .box {
+    width: 55px;
+    left: 19%;
+    top: -30%;
+  }
+  .questions {
+    margin-top: 0px;
+  }
+  .questions > div {
+    width: 100%;
+  }
+  .title {
+    text-align: center;
+  }
+}

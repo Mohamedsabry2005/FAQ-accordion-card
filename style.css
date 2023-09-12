@@ -44,7 +44,7 @@ body {
 }
 
 .image-background {
-  background: url(/images/illustration-woman-online-desktop.svg);
+  background: url(./images/illustration-woman-online-desktop.svg);
   height: 100%;
   background-repeat: no-repeat;
   background-position: 120% center;
